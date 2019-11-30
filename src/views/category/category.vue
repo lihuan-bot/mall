@@ -1,6 +1,6 @@
 <template>
   <div id="category">
-    我的
+   分類
   </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

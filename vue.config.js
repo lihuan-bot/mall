@@ -12,16 +12,16 @@ module.exports = {
       }
     }
   },
-  devServer: {
-    proxy: {
-      '/api': { 
-        target: 'http://47.103.221.217:8009', //对应服务器地址
-        changeOrigin: true, //允许跨域
-        ws: true,
-        pathRewrite: {
-        '^/api': ''
-        }
-      }
-    }
-  }
+  // devServer: {
+  //   proxy: {
+  //     '/api': { 
+  //       target: 'http://123.207.32.32:8000', //对应服务器地址
+  //       changeOrigin: true, //允许跨域
+  //       ws: true,
+  //       pathRewrite: {
+  //       '^/api': ''
+  //       }
+  //     }
+  //   }
+  // }
 }

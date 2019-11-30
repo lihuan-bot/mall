@@ -1,6 +1,6 @@
 <template>
   <div id="cart">
-    購物車
+  购物车
   </div>
 </template>
 
@@ -11,6 +11,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
