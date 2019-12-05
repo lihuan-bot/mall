@@ -3,10 +3,11 @@ import VueRouter from 'vue-router'
 
 
 
-const Home = () => import('views/home/home')
-const Cart = () => import('views/cart/cart')
-const Profile = () => import('views/profile/profile')
-const Category = () => import('views/category/category')
+const Home = () => import('views/home/Home')
+const Cart = () => import('views/cart/Cart')
+const Profile = () => import('views/profile/Profile')
+const Category = () => import('views/category/Category')
+const Detail = () => import('views/detail/Detail')
 //1 安裝插件
 Vue.use(VueRouter)
 const routes = [
@@ -33,6 +34,11 @@ const routes = [
     path: '/category',
     name: Category,
     component: Category
+  },
+  {
+    path: '/detail' ,
+    name: Detail,
+    component: Detail
   }
 ]
 // 創建router

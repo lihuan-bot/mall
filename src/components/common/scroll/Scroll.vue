@@ -15,7 +15,7 @@ export default {
       type: Number,
       default: 1
     },
-    pullUpLoad: {
+    pullUpLoad :{
       type: Boolean,
       default: false
     }
@@ -33,20 +33,37 @@ export default {
      pullUpLoad: this.pullUpLoad
    })
    //监听滚动位置
-   this.scroll.on('scroll',position =>{
+   if(this.probeType === 2 || this.probeType === 3) {
+     this.scroll.on('scroll',position => {
      this.$emit('scroll',position)
-     
    })
+   }
+   
    //监听上拉事件
-   this.scroll.on('pullingUp',() =>{
-     this.$emit('pullingUp')
-     
-   })
+  if(this.pullUpLoad){
+    this.scroll.on('pullingUp',() => {
+      this.$emit('pullingUp')
+      
+    })
+  }
+  
  },
+ computed: {
+    	scrollY() {
+    		return this.scroll.y
+      }
+    },
  methods: {
    scrollTo(x, y, time=500) {
-     this.scroll.scrollTo(x, y, time)
-   }
+     this.scroll && this.scroll.scrollTo(x, y, time)
+   },
+   refresh() {
+     this.scroll && this.scroll.refresh()
+   },
+   finishPullUp() {
+     this.scroll && this.scroll.finishPullUp()
+   },
+   
  }
 }
 </script>
